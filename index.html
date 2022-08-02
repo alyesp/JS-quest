@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>JS timed Quiz</title>
+</head>
+
+<body>
+
+  <header>
+      <div class="countdown">
+        <div class="timervisible" id="timerText"><span id="counter"></span>
+        </div> 
+      </div> 
+  </header>
+
+  <section>
+    <h1>Coding Quiz!</h1>
+    <p class="intro"> 
+      <p>We have set up this quiz for you! This will help us understand where your coding knowledge is. </p>
+    <p>
+      <h4>This is a timed assesment but please note that any wrong answer will deduct the time by 5 seconds. </h4>
+      </p>
+    <p> Good luck!</p>
+    </section>
+
+    <div class="container">
+      <div id="question-container" class="hide">
+        <div id="answer-buttons" class="button-row">
+          <button class="button1">Answer1</button>
+          <button class="button2">Answer2</button>
+          <button class="button3">Answer3</button>
+          <button class="button4">Answer4</button>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="start-button" class="start-button btn">Start!</button>
+        <button id="next-button" class="next-button btn hide">Next!</button>
+      </div>
+
+      <div class="score">
+        <span id="right-answer"></span>
+      </div>
+    </div>
+
+  <script src="./assets/js/script.js"></script>
+</body>

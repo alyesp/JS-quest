@@ -1,0 +1,110 @@
+:root {
+    background-color: rgb(205, 204, 204);
+}
+
+body {
+    padding: 10px;
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body p {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body h4 {
+    color: rgb(254, 19, 19);
+}
+
+body.correct {
+    color: rgb(67, 246, 67);
+}
+
+body.wrong {
+    color: rgb(203, 1, 1);
+}
+
+.timervisible {
+    position: relative;
+    top: -100px;
+    right: -800px;
+ }
+
+.container {
+    width: 200px;
+    max-width: 50%;
+    background-color:rgb(205, 204, 204);
+    padding: 10px;
+}
+
+.button-row {
+    display: grid;
+    height: 200px;
+    grid-template-columns: 200px;
+    grid-template-rows: repeat(2,auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.button-row:hover {
+    border-color: rgb(246, 246, 125)
+}
+
+.button1 {
+    background-color: rgb(255, 255, 255);
+    border-color:rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: rgb(255, 255, 255);
+    border-color:rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.button3 {
+    background-color: rgb(255, 255, 255);
+    border-color:rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.button4 {
+    background-color: rgb(255, 255, 255);
+    border-color:rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.start-button {
+    display: relative;
+}
+
+.next-button {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
