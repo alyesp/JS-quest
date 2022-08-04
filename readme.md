@@ -18,3 +18,6 @@ THEN I can save my initials and score</li>
 <h2>Screenshot: </h2>
 
 ![my screenshot](./assets/images/Screenshot3.png)
+
+[github]https://github.com/alyesp/JS-quest
+[githubpages]https://alyesp.github.io/JS-quest/

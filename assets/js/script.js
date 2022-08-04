@@ -2,11 +2,11 @@
 const startButton = document.getElementById('start-button');
 const nextButton = document.getElementById('next-button');
 
-const questionContainerEl = document.getElementById('question-contaienr');
+const questionContainerEl = document.getElementById('question-container');
 const questionEl = document.getElementById('question');
 const answerButtonEl = document.getElementById('answer-button');
 
-var timeVisEl = documnet.querySelector(".timervisible");
+var timeVisEl = document.querySelector(".timervisible");
 var countdown = document.getElementById("#timerText");
 
 
@@ -65,7 +65,7 @@ function setTime () {
     var timeLeft = 3000;
     var timeInterval = setInterval(function () {
         if (timeLeft > 1) {
-            timeVisEl.textContent = timeLeft + ' seconda remaining';
+            timeVisEl.textContent = timeLeft + 'seconds remaining';
             timeLeft--;
         } else if (timeLeft === 1) {
             timeVisEl.textContent = timeLeft + 'seconds remaining';
@@ -89,7 +89,9 @@ function startGame() {
     startButton.classList.add('hide')
     shuffleQuestions = questions.sort(() => Math.random() -0.5 )
     currentQuestionIndex = 0;
-    questionContainerEl.classList.remove('hide')
+    showQuestion(questions[0])
+    questionContainerEl.style.display = "block"
+    questionContainerEl.style.backgroundColor = "red"
     setNextQuestion()
     quizScore = 0;
 };
@@ -100,17 +102,22 @@ function setNextQuestion () {
 };
 
 function showQuestion(question) {
+    console.log(question)
     questionEl.innerText = question.question;
-    question.answers.foreach((answer) => {
+    console.log(question.answers)
+    //question.answers.foreach((answer) => {
+        console.log(question.answers.length)
+        for(i=0; i < question.answers.length; i++ ) {
+            console.log(question.answer[i])
         const button = document.createElement('button')
-        button.innerText = answer.text;
+        button.innerText= question.answer[i].text;
         button.classList.add('add')
-        if (answer.correct) {
-            button.dataset.correct = answer.correct
+        if (question.answer[i].correct) {
+            button.dataset.correct = question.answer[i].correct
         }
-        button.addEventListener('click, selectAnswer')
+        button.addEventListener("click", selectAnswer())
         answerButtonEl.appendChild(button)
-    })
+        }
 };
 
 function restState() {
