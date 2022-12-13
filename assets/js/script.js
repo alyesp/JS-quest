@@ -13,7 +13,7 @@ var intro = document.getElementById("intro");
 let shuffleQuestions, currentQuestionIndex;
 let quizScore = 0;
 
-const questions = [
+var questions = [
     {
         question: 'Inside which HTML element do we put the JavaScript?',
         answers: [
@@ -80,6 +80,8 @@ function setTime() {
 
 startButton.addEventListener('click', startGame)
 
+console.log('alive');
+
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
@@ -108,7 +110,7 @@ function showQuestion(question) {
     //question.answers.foreach((answer) => {
     console.log(question.answers.length)
     for (i = 0; i < question.answers.length; i++) {
-        console.log(question.answers[data])
+        // console.log(question.answers[]])
         const button = document.createElement('button')
         button.innerText = question.answers[i].text;
         button.classList.add('add')
