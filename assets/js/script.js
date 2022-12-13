@@ -115,7 +115,7 @@ function showQuestion(question) {
         button.innerText = question.answers[i].text;
         button.classList.add('add')
         if (question.answers[i].correct) {
-            button.dataset.correct = question.answers[data].correct
+            button.dataset.correct = question.answers[i].correct
         }
         button.addEventListener("click", selectAnswer)
         answerButtonEl.appendChild(button)
