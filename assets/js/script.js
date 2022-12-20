@@ -12,6 +12,8 @@ var intro = document.getElementById("intro");
 
 let shuffleQuestions, currentQuestionIndex;
 let quizScore = 0;
+var timeLeft = 30;
+var timeInterval;
 
 var questions = [
     {
@@ -62,23 +64,24 @@ var questions = [
 ];
 
 function setTime() {
-    var timeLeft = 3000;
-    var timeInterval = setInterval(function () {
+    // var timeLeft = 30;
+    clearInterval(timeInterval);
+    timeInterval = setInterval(function () {
         if (timeLeft > 1) {
             timeVisEl.textContent = timeLeft + 'seconds remaining';
-            timeLeft--;
+            timeLeft = timeLeft - 1;
         } else if (timeLeft === 1) {
             timeVisEl.textContent = timeLeft + 'seconds remaining';
-            timeLeft--;
+            timeLeft = timeLeft - 1;
         } else {
             timeVisEl.textContent = '';
-            clearInterval(timeInterval);
+            // clearInterval(timeInterval);
             displayMessage();
         }
-    }, 3000);
+    }, 1000);
 }
 
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
 
 console.log('alive');
 
@@ -95,7 +98,8 @@ function startGame() {
     showQuestion(questions[0])
     questionContainerEl.style.display = "block"
     setNextQuestion()
-    quizScore = 0;
+    // quizScore = 0;
+    setTime();
 };
 
 function setNextQuestion() {
@@ -146,7 +150,7 @@ function selectAnswer(e) {
         startButton.classList.remove("hide")
     }
     if (selectedButton.dataset = correct) {
-        quizScore++
+        // quizScore++
     }
     document.getElementById('right-answer').innerHTML = quizScore
 };
