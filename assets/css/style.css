@@ -38,8 +38,8 @@ body.wrong {
 
 .timervisible {
     position: relative;
-    top: -100px;
-    right: -800px;
+    top: 20px;
+    right:  20px;
  }
 
 .container {
